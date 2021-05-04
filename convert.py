@@ -22,9 +22,9 @@ def add_to_list(title, time):
 
     final_chapter_list.append(current_chapter)
 
-print(details_list)
+
 for item in details_list:
-    if item == '':
+    if item == '' or item == '-':
         continue
     elif ':' not in item:
         current_chapter_name += f' {item}' if len(current_chapter_name) >= 1 else item
