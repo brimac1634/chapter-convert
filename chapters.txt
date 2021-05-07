@@ -1,7 +1,13 @@
-00:00 – Introduction
+Some Chatper  00:00:00
 
+<<<<<<< HEAD
 01:10 - Our Market
 
 05:10 - Our awefew
 08:30 - thtrhtrt
 09:25 - rtbrt
+=======
+
+
+Another Chapter  05:45
+>>>>>>> parent of 5ebcfed (added continue in look for dash symbol)
