@@ -1,6 +1,6 @@
 # Chapter Converter
 
-1. Paste the chapter details into the "chapters.txt" file in this folder. Ensure that the chapter timings are all before or all after each chapter title.
+1. Paste the chapter details into the "chapters.txt" file in this folder. Ensure that the chapter timings are all before or all after each chapter title. Only the times can include the ":" character so remove any others from the txt file before running the script.
 
     **Examples:**
         01:44 Alkami
