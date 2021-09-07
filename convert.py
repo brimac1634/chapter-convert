@@ -4,7 +4,7 @@ import json
 
 chapter_string = open('chapters.txt', 'r').read().replace('\n', ' ')
 
-details_list = chapter_string.split(' ')
+details_list = chapter_string.strip().split(' ')
 
 time_first = ':' in details_list[0]
 final_chapter_list = []
@@ -23,18 +23,23 @@ def add_to_list(title, time):
     final_chapter_list.append(current_chapter)
 
 # print(details_list)
-for item in details_list:
+for i in range(len(details_list)):
+    item = details_list[i]
+
     if item == '' or 'â€“' in item:
         continue
     elif ':' not in item:
         current_chapter_name += f' {item}' if len(current_chapter_name) >= 1 else item
+
+        if time_first and i == len(details_list) - 1:
+            add_to_list(current_chapter_name, current_chapter_time)
     else:
         chapter_timing = item.split(':')
+        
         minutes = float(chapter_timing[0]) * 60
         seconds = float(chapter_timing[1])
         time = '%.2f' % round(minutes + seconds, 2)
         
-
         if time_first and len(current_chapter_name) >= 1:
             add_to_list(current_chapter_name, current_chapter_time)
             current_chapter_name = ''
